@@ -1,0 +1,14 @@
+import { PaginaInicial, Produtos, Validação, Finalização } from "../Modulos/ModDesafio"
+const acesso = new PaginaInicial()
+const item = new Produtos()
+const valcar = new Validação()
+const concluir = new Finalização()
+const kit = 1
+const qtd = 4
+it('Selecionar kit', () => {
+    acesso.acessoSite()
+    item.buscar(kit, qtd)
+    valcar.botaoCart()
+    valcar.validaCart(kit, qtd)
+    concluir.conclusao()
+})
