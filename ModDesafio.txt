@@ -1,0 +1,75 @@
+export class PaginaInicial {
+    acessoSite() {
+        return cy.visit('https://demo.nopcommerce.com/')
+    }
+}
+export class Produtos {
+    buscar(kit, qtd) {
+        switch (kit) {
+            case 3: //seleciona kit senior
+                cy.get('#small-searchterms').type('Nokia Lumia 1020{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'Nokia Lumia 1020') //validação do item
+                cy.get('.picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_20').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-20').click() //adiciona ao carrinho
+                cy.get('#small-searchterms').type('Samsung Series 9 NP900X4C Premium Ultrabook{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'Samsung Series 9 NP900X4C Premium Ultrabook') //validação do item
+                cy.get('.product-item > .picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_6').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-6').click() //adiciona ao carrinho
+                break
+            case 2: //seleciona kit junior
+                cy.get('#small-searchterms').type('HTC One M8 Android L 5.0 Lollipop{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'HTC One M8 Android L 5.0 Lollipop') //validação do item
+                cy.get('.picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_18').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-18').click() //adiciona ao carrinho
+                cy.get('#small-searchterms').type('Asus N551JK-XO076H Laptop{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'Asus N551JK-XO076H Laptop') //validação do item
+                cy.get('.product-item > .picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_5').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-5').click() //adiciona ao carrinho
+                break
+            default: //seleciona kit basic (padrão)
+                cy.get('#small-searchterms').type('HTC One Mini Blue{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'HTC One Mini Blue') //validação do item
+                cy.get('.picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_19').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-19').click() //adiciona ao carrinho
+                cy.get('#small-searchterms').type('Lenovo Thinkpad X1 Carbon Laptop{enter}') //busca item
+                cy.get('.item-grid').should('contain', 'Lenovo Thinkpad X1 Carbon Laptop') //validação do item
+                cy.get('.product-item > .picture > a > img').click() //abre o item
+                cy.get('#product_enteredQuantity_9').clear().type(qtd) //muda quantidade
+                cy.get('#add-to-cart-button-9').click() //adiciona ao carrinho
+        }
+    }
+}
+export class Validação {
+    botaoCart() {
+        cy.get('#topcartlink').click()
+    }
+    validaCart(kit, qtd) {
+        switch (kit) {
+            case 3: //valida carrinho kit senior
+                cy.get('.cart > tbody').should('contain', 'Nokia Lumia 1020')
+                cy.get('.cart > tbody').should('contain', 'Samsung Series 9 NP900X4C Premium Ultrabook')
+                cy.get('.cart > tbody').should('contain', qtd)
+                break
+            case 2: //valida carrinho kit junior
+                cy.get('.cart > tbody').should('contain', 'HTC One M8 Android L 5.0 Lollipop')
+                cy.get('.cart > tbody').should('contain', 'Asus N551JK-XO076H Laptop')
+                cy.get('.cart > tbody').should('contain', qtd)
+                break
+            default: //valida carrinho kit basic (padrão)
+                cy.get('.cart > tbody').should('contain', 'HTC One Mini Blue')
+                cy.get('.cart > tbody').should('contain', 'Lenovo Thinkpad X1 Carbon Laptop')
+                cy.get('.cart > tbody').should('contain', qtd)
+        }
+    }
+}
+export class Finalização {
+    conclusao() {
+        cy.get('#termsofservice').click() //aceita os termos do site
+        cy.get('#checkout').click() //finaliza a compra e segue para dados de entrega e pagamento
+    }
+}
