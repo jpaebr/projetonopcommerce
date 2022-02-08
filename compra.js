@@ -31,3 +31,4 @@ export class Finalização {
         cy.get('#checkout').click();
     }
 }
+
