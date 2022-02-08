@@ -5,11 +5,13 @@ export class Produtos {
         cy.get('.product-title > a').click();
         cy.get('#product_enteredQuantity_20').clear().type(qtd);
         cy.get('#add-to-cart-button-20').click();
+        cy.wait(1500);
         cy.get('#small-searchterms').type("Samsung Series 9 NP900X4C Premium Ultrabook{enter}");
         cy.get('.item-grid').should("contain", "Samsung Series 9 NP900X4C Premium Ultrabook");
         cy.get('.product-title > a').click();
         cy.get('#product_enteredQuantity_6').clear().type(qtd);
         cy.get('#add-to-cart-button-6').click();
+        cy.wait(1500);
     }
 }
 export class Validação {
