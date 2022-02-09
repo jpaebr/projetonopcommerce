@@ -1,0 +1,24 @@
+{
+  "name": "projetonopcommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open":"cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpaebr/projetonopcommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpaebr/projetonopcommerce/issues"
+  },
+  "homepage": "https://github.com/jpaebr/projetonopcommerce#readme",
+  "dependencies": {
+    "cypress": "^9.4.1"
+  }
+}
