@@ -24,13 +24,9 @@ Nosso modelo de kanban foi feito com a ferramenta "Trello", ferramenta esta que 
 Nosso grupo se autodenomima como QATech. Somos compostos por 5 integrantes, são eles:
 
 João Pedro Dias Santos - Ânima Holding;
-
 Luiz Carlos da Costa Ramos - UniSul Itajaí;
-
 Davidson Leonardo Carvalho - Ânima Holding;
-
 Adriano Augusto Quint - UniSul Palhoça;
-
 Lincoln Rogério Rubim do Monte - UAM - Vila Olimpia.
 
 
