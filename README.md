@@ -34,6 +34,7 @@ Adriano Augusto Quint - UniSul Palhoça;
 Lincoln Rogério Rubim do Monte - UAM - Vila Olimpia.
 
 
+
 Instrutor e monitor do projeto - Edilgleydson de Souza Abreu.
 
 Projeto finalizado no dia 08/02/2022 às 21h43.
