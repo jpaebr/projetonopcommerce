@@ -22,11 +22,18 @@ Utilizamos a versão 9.4.1 do Cypress.
 Nosso modelo de kanban foi feito com a ferramenta "Trello", ferramenta esta que é disponibilizada de forma on-line. Vocês podem acessar o nosso kanban a partir do endereço "https://trello.com/b/1B0J4FoB/qatech".
 
 Nosso grupo se autodenomima como QATech. Somos compostos por 5 integrantes, são eles:
+
 João Pedro Dias Santos - Ânima Holding;
+
 Luiz Carlos da Costa Ramos - UniSul Itajaí;
+
 Davidson Leonardo Carvalho - Ânima Holding;
+
 Adriano Augusto Quint - UniSul Palhoça;
+
 Lincoln Rogério Rubim do Monte - UAM - Vila Olimpia.
 
+
 Instrutor e monitor do projeto - Edilgleydson de Souza Abreu.
+
 Projeto finalizado no dia 08/02/2022 às 21h43.
